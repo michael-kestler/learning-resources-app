@@ -1,15 +1,17 @@
 <template>
     <div>
-        <ul id="storedResources">
-            <li v-for="resource in storedResources" :key="resource.id" :title="resource.title">
-                {{title}}
-            </li>
-        </ul>
+        <learning-resource></learning-resource>
     </div>
 </template>
 
 <script>
+    import LearningResource from './components/learning-resources/LearningResources.vue'
+
     export default {
+        components: {
+          LearningResource  
+        },
+
         data(){
         return {
         storedResources: [
