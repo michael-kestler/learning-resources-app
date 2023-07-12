@@ -1,7 +1,22 @@
 <template>
-    <ul id="storedResources">
-            <li v-for="resource in storedResources" :key="resource.id" :title="resource.title">
-                {{title}}
-            </li>
-        </ul>
+  <li>
+    <div>
+        <header>
+            <h3></h3>
+            <button>Delete</button>
+        </header>
+    </div>
+    <p></p>
+    <nav>
+        <a href="">View Resource</a>
+>    </nav>
+  </li>
 </template>
+
+<script>
+   export default{
+    props: ['title', 'description', 'link']
+
+   }
+
+</script>

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <learning-resource></learning-resource>
+        <learning-resource v-for="res in storedResources" :key="res.id"></learning-resource>
     </div>
 </template>
 
