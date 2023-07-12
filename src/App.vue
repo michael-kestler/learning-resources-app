@@ -1,8 +1,11 @@
 <template>
-    <ul>
-        <li></li>
-        <li></li>
-    </ul>
+    <div>
+        <ul id="storedResources">
+            <li v-for="resource in storedResources" :key="resource.id" :title="resource.title">
+                {{title}}
+            </li>
+        </ul>
+    </div>
 </template>
 
 <script>
