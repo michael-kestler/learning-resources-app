@@ -1,3 +1,3 @@
 <template>
-    <div></div>
+    <h2>Add Resource</h2>
 </template>
