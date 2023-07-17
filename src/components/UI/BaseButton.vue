@@ -1,19 +1,17 @@
 <template>
-    <button :class="mode">
-         <slot></slot>
-    </button>
-       
+  <button :class="mode">
+    <slot></slot>
+  </button>
 </template>
 
 <script>
-    export default {
-        props: ['mode']
-    }
+export default {
+  props: ['mode'],
+};
 </script>
 
-
 <style scoped>
-    button {
+button {
   padding: 0.75rem 1.5rem;
   font-family: inherit;
   background-color: #3a0061;
@@ -38,5 +36,4 @@ button:active {
 .flat:active {
   background-color: #edd2ff;
 }
-
 </style>
