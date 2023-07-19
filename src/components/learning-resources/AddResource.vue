@@ -1,13 +1,13 @@
 <template>
   <base-dialog v-if="inputIsInvalid" title="Invalid Input" @close="confirmError">
-    <template #default>
+    <template v-slot:default>
       <p>Unfortunately, at least one input is invalid.</p>
       <p>
         Please check and make sure you put at least a few characters into each
         input field.
       </p>
     </template>
-    <template #actions>
+    <template v-slot:actions>
       <base-button @click="confirmError">Okay</base-button>
     </template>
   </base-dialog>
@@ -54,14 +54,14 @@ export default {
       const enteredUrl = this.$refs.linkInput.value;
 
       if (
-        enteredTitle.trim() === ' ' ||
-        enteredDescription.trim() === ' ' ||
-        enteredUrl.trim() === ' '
+        enteredTitle.trim() === '' ||
+        enteredDescription.trim() === '' ||
+        enteredUrl.trim() === ''
       ) {
+        console.log("Input is empty");
         this.inputIsInvalid = true;
         return;
       }
-
       this.addResource(enteredTitle, enteredDescription, enteredUrl);
     },
     confirmError() {

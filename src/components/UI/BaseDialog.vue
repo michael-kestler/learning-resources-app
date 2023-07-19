@@ -11,7 +11,7 @@
         </section>
         <menu>
             <slot name="actions">
-                <base-button @click="$emit('close')"></base-button>
+                <base-button @click="$emit('close')">Close</base-button>
             </slot>
         </menu>
     </dialog>
