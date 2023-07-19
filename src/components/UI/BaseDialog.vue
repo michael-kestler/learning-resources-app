@@ -1,5 +1,5 @@
 <template>
-    <div></div>
+    <div @click="$emit"></div>
     <dialog open>
         <header>
             <slot name="header">
@@ -10,7 +10,9 @@
             <slot></slot>
         </section>
         <menu>
-            <slot name="actions"></slot>
+            <slot name="actions">
+                <base-button @click="$emit('close')"></base-button>
+            </slot>
         </menu>
     </dialog>
 </template>
@@ -23,8 +25,11 @@
                 required: false
 
             }
-        }
+        },
+         emits: ['close']
     }
+
+   
 </script>
 
 <style scoped>
